@@ -75,6 +75,7 @@ body {
     font-size: 16px;
     color: #333;
     font-family: RobotoRegular, serif;
+    min-width: 1300px;
 }
 
 body {
@@ -108,7 +109,7 @@ a:hover {
 }
 
 .basic_width {
-    max-width: 1170px;
+    width: 1170px;
     padding-left: 15px;
     padding-right: 15px;
     margin: 0 auto;
@@ -130,14 +131,28 @@ a:hover {
 
 /************************* header *************************/
 .header {
+    /*background:*/
+            /*url("../images/1.svg") 72% 7% no-repeat,*/
+            /*linear-gradient(rgba(255,25,63,0.8), rgba(255,63,63,1)) 0 0 no-repeat,*/
+            /*url("../images/header-bg.jpg") 0 0 no-repeat,*/
+            /*url("../images/header-curve.png") 0 592px no-repeat,*/
+            /*url("../images/forkLift-bg.png") 100% 75% no-repeat;*/
     background:
-            url("../images/1.svg") 72% 7% no-repeat,
             linear-gradient(rgba(255,25,63,0.8), rgba(255,63,63,1)) 0 0 no-repeat,
             url("../images/header-bg.jpg") 0 0 no-repeat,
             url("../images/header-curve.png") 0 592px no-repeat,
             url("../images/forkLift-bg.png") 100% 75% no-repeat;
-    background-size: 43% auto, 100% 592px, auto, auto, auto;
+    /*background-size: 43% auto, 100% 592px, auto, auto, auto;*/
+    background-size: 100% 592px, auto, auto, auto;
     padding-bottom: 39px;
+}
+
+.svg {
+    position: absolute;
+    width: 888px;
+    height: 618px;
+    top: -110px;
+    right: -100px;
 }
 
 .header-top {
@@ -259,16 +274,8 @@ a:hover {
     color: #fff;
 }
 
-.forkLift {
-    position: absolute;
-    background: url(../images/1.svg) 50% 50% no-repeat;
-    background-size: 1000px 900px;
-    top: -218px;
-    right: 20px;
-    width: 800px;
-    height: 1000px;
-    z-index: 0;
-    display: none;
+.header-bottom .basic_width{
+    position: relative;
 }
 
 .header-bottom h1 {
@@ -472,7 +479,7 @@ a:hover {
     margin-right: 83px;
 }
 
-    /************************* consultation *************************/
+/************************* consultation *************************/
 .consultation {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -670,7 +677,6 @@ a:hover {
     padding: 0 20px;
     display: block;
     margin-bottom: 15px;
-    /*background-color: #fff;*/
 }
 
 .form-el {
@@ -992,14 +998,9 @@ a:hover {
     transition: 0.2s;
 }
 
-#header-top-scroll.scroll {
-    /*height: 120px;*/
-}
-
 .header-top.scroll {
     position: fixed;
     top: -120px;
-    /*top: 0;*/
     left: 0;
     right: 0;
     z-index: 8000;
@@ -1015,21 +1016,6 @@ a:hover {
 .header-top.scroll.show{
     top: 0;
 }
-
-
-/*.header-top {*/
-    /*animation: navclose 1s linear;*/
-/*}*/
-
-/*@keyframes navopen {*/
-    /*0% {top: -120px;}*/
-    /*100% {top: 0;}*/
-/*}*/
-
-/*@keyframes navclose {*/
-    /*0% {top: 0;}*/
-    /*100% {top: -120px;}*/
-/*}*/
 
 .header-top.scroll .header-top__phone-el {
     color: #ff193f;
