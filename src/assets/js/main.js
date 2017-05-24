@@ -8,6 +8,8 @@ $(document).ready(function () {
     //     dashGap: 20
     // });
 
+    initMap();
+
     $('a.modalbox').fancybox({
         closeBtn: true,
         padding: 0,
@@ -77,5 +79,15 @@ function validatePopups() {
     });
 }
 
-
+function initMap() {
+    var ravicia = {lat: 53.8506881, lng: 27.682263799999987};
+    var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 14,
+        center: {lat: 53.8456881, lng: 27.682263799999987}
+    });
+    var marker = new google.maps.Marker({
+        position: ravicia,
+        map: map
+    });
+}
 

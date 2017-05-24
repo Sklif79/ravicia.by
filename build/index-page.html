@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>BELTAPAZ</title>
+    <title>ravicia</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,7 +13,8 @@
     <!-- favicon -->
 
     <!--[if IE 9]>
-    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <script async defer src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
 </head>
 
 <body>
@@ -125,13 +126,13 @@
                 </h2>
                 <img src="assets/images/partners/cummins.png" alt="">
             </div>
-            <div class="manufacturer__line-center">
+            <div class="manufacturer__line-center first-line">
                 <img src="assets/images/partners/linde-h.png" alt="">
                 <img src="assets/images/partners/rexroth.png" alt="">
                 <img src="assets/images/partners/sauer.png" alt="">
                 <img src="assets/images/partners/palfinger.png" alt="">
             </div>
-            <div class="manufacturer__line-center">
+            <div class="manufacturer__line-center second-line">
                 <img src="assets/images/partners/volvo.png" alt="">
                 <img src="assets/images/partners/cat.png" alt="">
                 <img src="assets/images/partners/jsb.png" alt="">
@@ -313,15 +314,95 @@
         </h2>
     </div>
 
+    <!--contacts-->
+    <div class="contacts">
+        <div class="map-wrap">
+            <div id="map"></div>
+            <div class="overlay-half-blink"></div>
+            <div class="overlay-half">
+                <div class="basic_width">
+                    <div class="contacts-items">
+                        <div class="contact-item loc">
+                            Минск, ул. Промышленная, д.21а,<br>
+                            офис 46-1
+                        </div>
+                        <div class="contact-item phone">
+                            <a href="tel:+375291206833">+375 (29) 120-68-33 (Velcom)</a>
+                            <a href="tel:+37533120-68-33">+375 (33) 120-68-33 (МТС)</a>
+                        </div>
+                        <div class="contact-item mail">
+                            <a href="mailto:ravicia2016@mail.ru">ravicia2016@mail.ru</a>
+                        </div>
+                    </div>
+                    <form action="" method="post" class="presence-form form">
+                        <div class="form-title">
+                            ПРОВЕРИТЬ НАЛИЧИЕ ЗАПЧАСТЕЙ И КОМПЛЕКТУЮЩИХ
+                        </div>
 
+                        <label class="form-el-wrap half">
+                            <input class="form-el" type="text" placeholder="Марка вашей техники...">
+                        </label>
+
+                        <label class="form-el-wrap half">
+                            <input class="form-el" type="text" placeholder="Каталожный номер запчасти...">
+                        </label>
+
+                        <label class="form-el-wrap half">
+                            <input class="form-el" type="text" placeholder="Модель вашей техники...">
+                        </label>
+
+                        <label class="form-el-wrap half">
+                            <input class="form-el" type="text" placeholder="Описание запчасти...">
+                        </label>
+
+                        <label class="form-el-wrap half">
+                            <input class="form-el" type="text" placeholder="Год выпуска...">
+                        </label>
+
+                        <label class="form-el-wrap half">
+                            <input class="form-el" type="text" placeholder="Ваш номер телефона...">
+                        </label>
+
+                        <label class="form-el-wrap half">
+                            <input class="form-el" type="text" placeholder="VIN...">
+                        </label>
+
+                        <label class="form-el-wrap half">
+                            <input class="form-el" type="text" placeholder="Ваша электронная почта...">
+                        </label>
+
+                        <input class="form__submit" type="submit" value="ПРОВЕРИТЬ НАЛИЧИЕ">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 </div><!-- wrapper -->
 
 <!-- footer -->
-<footer class="footer">
-
+<footer class="footer basic_width">
+    <div class="footer-wrap">
+        <div class="details">
+            <strong>ЗАО «Равиция»</strong>
+            <div>Регистрационный номер ЕГР: 192665602</div>
+            <div>УНП: 192665602</div>
+        </div>
+        <div class="footer-logo">
+            <img src="assets/images/logo-coral.png" alt="">
+        </div>
+        <div class="dev">
+            Разработка лендинга:
+            <img src="assets/images/webcompany.png" alt="">
+        </div>
+    </div>
 </footer>
 
 <script src="assets/js/libs.js"></script>
 <script src="assets/js/main.js"></script>
+
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAyr3wPjAHMfllLVw8ImJbHHqGCpZFkRvE&language=ru&callback=initMap"
+        type="text/javascript"></script>
+
 </body>
 </html>
