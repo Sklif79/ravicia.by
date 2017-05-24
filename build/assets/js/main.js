@@ -68,8 +68,8 @@ function scrollNav() {
 // sticky header
 function stickyNav() {
     $('div.header-top').clone().addClass('scroll').appendTo('div#header-top-scroll');
+
     $(window).scroll(function() {
-        console.log($(this).scrollTop())
         if($(this).scrollTop() >= 150) {
             $('.header-top.scroll').addClass('show');
         }
@@ -83,12 +83,46 @@ function phoneMask(){
     $(".phone-mask").mask("+375 (99) 999-99-99");
 }
 
+//определяем IE
+function getInternetExplorerVersion()
+{
+    var rv = -1;
+    if (navigator.appName == 'Microsoft Internet Explorer')
+    {
+        var ua = navigator.userAgent;
+        var re  = new RegExp("MSIE ([0-9]{1,}[\.0-9]{0,})");
+        if (re.exec(ua) != null)
+            rv = parseFloat( RegExp.$1 );
+    }
+    else if (navigator.appName == 'Netscape')
+    {
+        var ua = navigator.userAgent;
+        var re  = new RegExp("Trident/.*rv:([0-9]{1,}[\.0-9]{0,})");
+        if (re.exec(ua) != null)
+            rv = parseFloat( RegExp.$1 );
+    }
+    return rv;
+}
+
 
 //предзагрузка погрузчика
 function preloadImg() {
-    var img = '<img src="assets/images/1_animated.svg" alt="" class="svg">';
+    var preload = document.getElementsByClassName('preload')[0];
+    var img = document.createElement('img');
+
+    if(getInternetExplorerVersion()!==-1){
+        //Значит это IE
+        img.src = 'assets/images/1.svg';
+        img.className += 'svg svg-ie';
+        preload.appendChild(img);
+        return false;
+    }
+
+    //устранили кеширование
+    img.src = 'assets/images/1_animated.svg' + '?' + Math.random();
+    img.className += 'svg';
 
     setTimeout(function () {
-        $('.preload').append(img);
+        preload.appendChild(img);
     }, 1000);
 }

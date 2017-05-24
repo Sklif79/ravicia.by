@@ -131,28 +131,25 @@ a:hover {
 
 /************************* header *************************/
 .header {
-    /*background:*/
-            /*url("../images/1.svg") 72% 7% no-repeat,*/
-            /*linear-gradient(rgba(255,25,63,0.8), rgba(255,63,63,1)) 0 0 no-repeat,*/
-            /*url("../images/header-bg.jpg") 0 0 no-repeat,*/
-            /*url("../images/header-curve.png") 0 592px no-repeat,*/
-            /*url("../images/forkLift-bg.png") 100% 75% no-repeat;*/
     background:
             linear-gradient(rgba(255,25,63,0.8), rgba(255,63,63,1)) 0 0 no-repeat,
             url("../images/header-bg.jpg") 0 0 no-repeat,
             url("../images/header-curve.png") 0 592px no-repeat,
             url("../images/forkLift-bg.png") 100% 75% no-repeat;
-    /*background-size: 43% auto, 100% 592px, auto, auto, auto;*/
     background-size: 100% 592px, auto, auto, auto;
     padding-bottom: 39px;
 }
 
 .svg {
     position: absolute;
-    width: 888px;
+    width: 868px;
     height: 618px;
     top: -110px;
-    right: -100px;
+    right: -80px;
+}
+
+.svg-ie {
+    top: -91px;
 }
 
 .header-top {
@@ -975,13 +972,18 @@ a:hover {
 }
 
 .dev {
+    padding-top: 5px;
+    position: relative;
+}
+
+.dev a {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
-    padding-top: 5px;
+    color: #333;
 }
 
 .dev img {
