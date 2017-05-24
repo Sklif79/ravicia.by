@@ -14,6 +14,16 @@
 
     <!--[if IE 9]>
     <script async defer src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+    <script>
+        function preloadImages() {
+            for (var i = 0; i < arguments.length; i++) {
+                new Image().src = arguments[i];
+            }
+        }
+
+        preloadImages('assets/images/1_animated.svg');
+    </script>
 </head>
 
 <body>
@@ -55,8 +65,8 @@
             </div>
         </div>
         <div class="header-bottom">
-            <div class="basic_width">
-                <img src="assets/images/1_animated.svg" alt="" class="svg">
+            <div class="basic_width preload">
+                <!--<img src="assets/images/1_animated.svg" alt="" class="svg">-->
                 <h1>
                     НАДЕЖНЫЙ ПОСТАВЩИК
                     ЗАПЧАСТЕЙ И КОМПЛЕКТУЮЩИХ
@@ -100,7 +110,6 @@
                     </li>
                 </ul>
 
-                <div class="forkLift"></div>
                 <form class="header-bottom-form about" method="post" action="">
                     <div class="header-bottom-form__title">
                         Получите консультацию

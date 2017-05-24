@@ -10,6 +10,8 @@ $(document).ready(function () {
 
     phoneMask();
 
+    preloadImg();
+
     $('a.modalbox').fancybox({
         closeBtn: true,
         padding: 0,
@@ -79,4 +81,14 @@ function stickyNav() {
 
 function phoneMask(){
     $(".phone-mask").mask("+375 (99) 999-99-99");
+}
+
+
+//предзагрузка погрузчика
+function preloadImg() {
+    var img = '<img src="assets/images/1_animated.svg" alt="" class="svg">';
+
+    setTimeout(function () {
+        $('.preload').append(img);
+    }, 1000);
 }
