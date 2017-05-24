@@ -122,7 +122,7 @@ function preloadImg() {
     img.src = 'assets/images/1_animated.svg' + '?' + Math.random();
     img.className += 'svg';
 
-    setTimeout(function () {
+    // setTimeout(function () {
         preload.appendChild(img);
-    }, 1000);
+    // }, 1000);
 }
