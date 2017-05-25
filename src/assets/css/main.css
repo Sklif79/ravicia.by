@@ -156,6 +156,8 @@ a:hover {
     justify-content: space-between;
     align-items: center;
     height: 120px;
+    position: relative;
+    z-index: 10;
 }
 
 .header-top__phone {
